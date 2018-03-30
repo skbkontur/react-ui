@@ -1,6 +1,5 @@
 /// <reference types="react" />
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import '../ensureOldIEClassName';
 import IconNames from '../Icon/IconNames';
 export declare enum ButtonSize {
@@ -26,8 +25,14 @@ export declare type ButtonProps = {
     _noPadding?: boolean;
     /** @ignore */
     _noRightPadding?: boolean;
+    /**
+     * Визуально нажатое состояние.
+     */
     active?: boolean;
     align?: React.CSSProperties['textAlign'];
+    /**
+     * Кнопка со стрелкой.
+     */
     arrow?: boolean;
     autoFocus?: boolean;
     borderless?: boolean;
@@ -40,6 +45,9 @@ export declare type ButtonProps = {
     disableFocus?: boolean;
     error?: boolean;
     focused?: boolean;
+    /**
+     * Иконка слева от текста кнопки.
+     */
     icon?: IconNames;
     loading?: boolean;
     narrow?: boolean;
@@ -50,6 +58,9 @@ export declare type ButtonProps = {
     onMouseOver?: React.MouseEventHandler<HTMLButtonElement>;
     size: ButtonSize;
     type: ButtonType;
+    /**
+     * Вариант использования. Влияет на цвет кнопки.
+     */
     use: ButtonUse;
     /** @ignore */
     visuallyFocused?: boolean;
@@ -64,27 +75,6 @@ declare class Button extends React.Component<ButtonProps, ButtonState> {
     static TOP_RIGHT: number;
     static BOTTOM_RIGHT: number;
     static BOTTOM_LEFT: number;
-    static propTypes: {
-        active: PropTypes.Requireable<any>;
-        arrow: PropTypes.Requireable<any>;
-        autoFocus: PropTypes.Requireable<any>;
-        borderless: PropTypes.Requireable<any>;
-        checked: PropTypes.Requireable<any>;
-        disableFocus: PropTypes.Requireable<any>;
-        disabled: PropTypes.Requireable<any>;
-        focused: PropTypes.Requireable<any>;
-        icon: PropTypes.Requireable<any>;
-        loading: PropTypes.Requireable<any>;
-        narrow: PropTypes.Requireable<any>;
-        size: PropTypes.Requireable<any>;
-        use: PropTypes.Requireable<any>;
-        visuallyFocused: PropTypes.Requireable<any>;
-        width: PropTypes.Requireable<any>;
-        onClick: PropTypes.Requireable<any>;
-        onMouseEnter: PropTypes.Requireable<any>;
-        onMouseLeave: PropTypes.Requireable<any>;
-        onMouseOver: PropTypes.Requireable<any>;
-    };
     static defaultProps: {
         use: string;
         size: string;
