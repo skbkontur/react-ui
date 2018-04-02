@@ -1,13 +1,7 @@
 /// <reference types="react" />
 import * as React from 'react';
-import { PopupPosition } from '../Popup/PopupPosition';
-export declare enum TooltipTrigger {
-    Hover = "hover",
-    Click = "click",
-    Focus = "focus",
-    Opened = "opened",
-    Closed = "closed",
-}
+import { PopupPosition } from '../Popup';
+export declare type TooltipTrigger = 'hover' | 'click' | 'focus' | 'opened' | 'closed';
 export declare type TooltipProps = {
     children?: React.ReactNode;
     className?: string;
@@ -47,8 +41,8 @@ export declare type TooltipState = {
 };
 declare class Tooltip extends React.Component<TooltipProps, TooltipState> {
     static defaultProps: {
-        pos: PopupPosition;
-        trigger: TooltipTrigger;
+        pos: string;
+        trigger: string;
         allowedPositions: PopupPosition[];
     };
     _hoverTimeout: number | null;

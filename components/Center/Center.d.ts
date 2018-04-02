@@ -1,10 +1,6 @@
 /// <reference types="react" />
 import * as React from 'react';
-export declare enum HorizontalAlign {
-    left = "left",
-    center = "center",
-    right = "right",
-}
+export declare type HorizontalAlign = 'left' | 'center' | 'right';
 export interface CenterProps extends React.HTMLAttributes<HTMLDivElement> {
     /**
      * Горизонтальное выравнивание контента.
@@ -20,7 +16,6 @@ export interface CenterState {
  * свойства как в любой div.
  */
 export default class Center extends React.Component<CenterProps, CenterState> {
-    static align: typeof HorizontalAlign;
     static defaultProps: {
         align: string;
     };

@@ -1,25 +1,10 @@
 /// <reference types="react" />
 import * as React from 'react';
 import '../ensureOldIEClassName';
-import IconNames from '../Icon/IconNames';
-export declare enum ButtonSize {
-    Small = "small",
-    Medium = "medium",
-    Large = "large",
-}
-export declare enum ButtonType {
-    Button = "button",
-    Submit = "submit",
-    Reset = "reset",
-}
-export declare enum ButtonUse {
-    Default = "default",
-    Primary = "primary",
-    Success = "success",
-    Danger = "danger",
-    Pay = "pay",
-    Link = "link",
-}
+import { IconName } from '../Icon';
+export declare type ButtonSize = 'small' | 'medium' | 'large';
+export declare type ButtonType = 'button' | 'submit' | 'reset';
+export declare type ButtonUse = 'default' | 'primary' | 'success' | 'danger' | 'pay' | 'link';
 export declare type ButtonProps = {
     /** @ignore */
     _noPadding?: boolean;
@@ -48,7 +33,7 @@ export declare type ButtonProps = {
     /**
      * Иконка слева от текста кнопки.
      */
-    icon?: IconNames;
+    icon?: IconName;
     loading?: boolean;
     narrow?: boolean;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
