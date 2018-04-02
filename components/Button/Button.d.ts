@@ -56,12 +56,12 @@ export declare type ButtonProps = {
     onMouseEnter?: React.MouseEventHandler<HTMLButtonElement>;
     onMouseLeave?: React.MouseEventHandler<HTMLButtonElement>;
     onMouseOver?: React.MouseEventHandler<HTMLButtonElement>;
-    size: ButtonSize;
-    type: ButtonType;
+    size?: ButtonSize;
+    type?: ButtonType;
     /**
      * Вариант использования. Влияет на цвет кнопки.
      */
-    use: ButtonUse;
+    use?: ButtonUse;
     /** @ignore */
     visuallyFocused?: boolean;
     warning?: boolean;
