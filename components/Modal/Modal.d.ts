@@ -1,6 +1,9 @@
 /// <reference types="react" />
 import * as React from 'react';
 import { EventSubscription } from 'fbemitter';
+import { Footer } from './ModalFooter';
+import { Header } from './ModalHeader';
+import { Body } from './ModalBody';
 export interface ModalProps {
     /**
      * Отключает событие onClose, также дизейблит кнопку закрытия модалки
@@ -50,27 +53,5 @@ declare class Modal extends React.Component<ModalProps, ModalState> {
     private handleContainerClick;
     private handleKeyDown;
     private checkHorizontalScrollAppearance;
-}
-export interface HeaderProps {
-    close?: boolean;
-}
-export declare class Header extends React.Component<HeaderProps> {
-    render(): JSX.Element;
-}
-export declare class Body extends React.Component {
-    render(): JSX.Element;
-}
-export interface FooterProps {
-    /**
-     * Включает серый цвет в футере
-     */
-    panel?: boolean;
-}
-/**
- * Футер модального окна.
- */
-export declare class Footer extends React.Component<FooterProps> {
-    _scrollbarWidth: number;
-    render(): JSX.Element;
 }
 export default Modal;
