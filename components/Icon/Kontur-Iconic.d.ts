@@ -155,6 +155,7 @@ declare const _default: {
     Baby: string;
     Send: string;
     Send2: string;
+    Send3: string;
     Copy: string;
     ArrowCorner1: string;
     Dot12Dashed: string;
